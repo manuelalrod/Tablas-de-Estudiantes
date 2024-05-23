@@ -22,7 +22,7 @@ export class AgregarEstudianteComponent implements OnInit{
     private router: Router) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['dni'];
+    this.id = this.route.snapshot.params['id'];
     if(this.id) {
       console.log("Editar");
       this.estudianteservice.obtenerEstudiante(this.id).subscribe(data => {
