@@ -1,1 +1,39 @@
-<p>lugar-voluntariado works!</p>
+<header>
+
+</header>
+<div class="container">
+    <div class="row">
+        <button class="btn" (click)="agregarLugar()">+</button>
+        <div class="custom-col">
+            <table class="table">
+                <thead>
+                    <tr class="row">
+                        <th class="co"> Nombre Lugar </th>
+                        <th class="co"> Ubicación </th>
+                        <th class="co"> Trabajo </th>
+                        <th class="co"> Nombre Completo </th>
+                        <th class="co"> Celular </th>
+                        <th class="co"> Horas </th>
+                        <th class="co"> Observación </th>
+                        <th class="co"> Acciones </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let lugar of lugares | async" class="row">
+                        <td class="col"><i>{{lugar.name_lugar}}</i></td>
+                        <td class="col"><i>{{lugar.ubicacion}}</i></td>
+                        <td class="col"><i>{{lugar.trabajo}}</i></td>
+                        <td class="col"><i>{{lugar.name_complete}}</i></td>
+                        <td class="col"><i>{{lugar.phone}}</i></td>
+                        <td class="col"><i>{{lugar.horas}}</i></td>
+                        <td class="col"><i>{{lugar.observacion}}</i></td>
+                        <td class="col">
+                            <button class="btn-actualizar" [routerLink]="['/lugaresvoluntariado/editar', lugar.id]">Editar</button>
+                            <button class="btn-borrar" (click)="borrarLugar(lugar.id)"> Borrar </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
