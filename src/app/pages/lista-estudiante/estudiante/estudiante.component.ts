@@ -34,8 +34,4 @@ export class EstudianteComponent implements OnInit{
     this.estudiantes = this.estudianteservice.obtenerEstudiantes();
   }
 
-  actualizarEstudiante(id: string) {
-    this.router.navigate(['/listadoestudiante/editar', id]);
-  }
-
 }
