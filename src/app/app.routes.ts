@@ -29,5 +29,9 @@ export const routes: Routes = [
    {
     path: 'lugaresvoluntariado/editar/:id',
     loadComponent: () => import('./pages/lugares-voluntariado/agregar-lugar/agregar-lugar.component').then((m) => m.AgregarLugarComponent)
-   }
+   },
+   {
+    path: 'horasvoluntariado',
+    loadComponent: () => import('./pages/horas-voluntariados/horas-voluntariado/horas-voluntariado.component').then((m) => m.HorasVoluntariadoComponent)
+    }
 ];

@@ -25,3 +25,4 @@ import { LugaresService } from './shared/lugares/lugares.service';
 export class AppComponent {
   title = 'estudiantesUni';
 }
+
