@@ -1,1 +1,65 @@
-<p>agregar-lugar works!</p>
+<div class="row">
+    <div class="custom-col">
+        <form (ngSubmit)="onSubmit()" #lugarForm="ngForm">
+            <div class="custom-col">
+                <label class="control-label" for="carrera">Nombre del Lugar</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    required [(ngModel)]="lugar.name_lugar" 
+                    name="nombrelugar">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="year_study">Ubicación</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    required [(ngModel)]="lugar.ubicacion" 
+                    name="ubicacion">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="group_class">Trabajo</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    required [(ngModel)]="lugar.trabajo" 
+                    name="trabajo">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="Nombre Completo"> Nombre Completo </label>
+                <input 
+                class="form-control" 
+                type="text" 
+                required [(ngModel)]="lugar.name_complete" 
+                name="nombreCompleto">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="phone">Celular</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    required [(ngModel)]="lugar.phone" 
+                    name="phone">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="hour_social">Horas</label>
+                <input 
+                    class="form-control" 
+                    type="number" 
+                    required [(ngModel)]="lugar.horas" 
+                    name="hour_social">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="observation">Observación</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    [(ngModel)]="lugar.observacion" 
+                    name="observation">
+            </div>
+            <div class="button">
+                <button type="submit" class="btn" [disabled]="!lugarForm.form.valid">Subir</button>
+            </div>
+        </form>
+    </div>
+</div>
