@@ -1,0 +1,97 @@
+<div class="row">
+    <div class="custom-col">
+        <form (ngSubmit)="onSubmit()" #estudianteForm="ngForm">
+            <div class="custom-col">
+                <label class="control-label" for="Nombre Completo"> Nombre Completo </label>
+                <input 
+                class="form-control" 
+                type="text" 
+                required [(ngModel)]="estudiante.name_complete" 
+                name="Nombre Completo">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="dni">Cédula</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    required [(ngModel)]="estudiante.dni" 
+                    name="dni">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="email">Email</label>
+                <input 
+                    class="form-control" 
+                    type="email" 
+                    required [(ngModel)]="estudiante.email" 
+                    name="email">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="phone">Celular</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    required [(ngModel)]="estudiante.phone" 
+                    name="phone">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="address">Dirección</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    required [(ngModel)]="estudiante.address" 
+                    name="address">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="carrera">Carrera</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    required [(ngModel)]="estudiante.carrera" 
+                    name="carrera">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="year_study">Año de Estudio</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    required [(ngModel)]="estudiante.year_study" 
+                    name="year_study">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="group_class">Grupo de Clase</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    required [(ngModel)]="estudiante.group_class" 
+                    name="group_class">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="hour_social">Horas</label>
+                <input 
+                    class="form-control" 
+                    type="number" 
+                    required [(ngModel)]="estudiante.hour_social" 
+                    name="hour_social">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="empresa">Empresa</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    [(ngModel)]="estudiante.empresa" 
+                    name="empresa">
+            </div>
+            <div class="custom-col">
+                <label class="control-label" for="observation">Observación</label>
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    [(ngModel)]="estudiante.observation" 
+                    name="observation">
+            </div>
+            <div class="button">
+                <button type="submit" class="btn" [disabled]="!estudianteForm.form.valid">Subir</button>
+            </div>
+        </form>
+    </div>
+</div>

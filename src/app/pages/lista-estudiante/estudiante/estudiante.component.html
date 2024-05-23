@@ -1,0 +1,48 @@
+<header>
+
+</header>
+<div class="container">
+    <div class="row">
+        <button class="btn" (click)="agregarEstudiante()">+</button>
+        <div class="custom-col">
+            <table class="table">
+                <thead>
+                    <tr class="row">
+                        <th class="co"> Nombre Completo </th>
+                        <th class="co"> Cédula </th>
+                        <th class="co"> Email </th>
+                        <th class="co"> Celular </th>
+                        <th class="co"> Dirección </th>
+                        <th class="co"> Carrera </th>
+                        <th class="co"> Año de Estudio </th>
+                        <th class="co"> Grupo de Clase </th>
+                        <th class="co"> Horas </th>
+                        <th class="co"> Empresa </th>
+                        <th class="co"> Observación </th>
+                        <th class="co"> Acciones </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let estudiante of estudiantes | async" class="row">
+                        <td class="col"><i>{{estudiante.name_complete}}</i></td>
+                        <td class="col"><i>{{estudiante.dni}}</i></td>
+                        <td class="col"><i>{{estudiante.email}}</i></td>
+                        <td class="col"><i>{{estudiante.phone}}</i></td>
+                        <td class="col"><i>{{estudiante.address}}</i></td>
+                        <td class="col"><i>{{estudiante.carrera}}</i></td>
+                        <td class="col"><i>{{estudiante.year_study}}</i></td>
+                        <td class="col"><i>{{estudiante.group_class}}</i></td>
+                        <td class="col"><i>{{estudiante.hour_social}}</i></td>
+                        <td class="col"><i>{{estudiante.empresa}}</i></td>
+                        <td class="col"><i>{{estudiante.observation}}</i></td>
+                        <td class="col">
+                            <button class="btn-actualizar" [routerLink]="['/listadoestudiante/editar', estudiante.id]">Editar</button>
+                            <button class="btn-borrar" (click)="borrarEstudiante(estudiante.id)"> Borrar </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    

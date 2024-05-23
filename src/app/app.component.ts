@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+import { EstudianteComponent } from './pages/lista-estudiante/estudiante/estudiante.component';
+import { EstudiantesService } from './shared/estudiantes/estudiantes.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet, 
+    EstudianteComponent,
+    HttpClientModule,
+    FormsModule
+   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  providers: [EstudiantesService]
 })
 export class AppComponent {
   title = 'estudiantesUni';
